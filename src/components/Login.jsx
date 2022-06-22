@@ -1,10 +1,6 @@
 import React, { useState  ,useEffect} from 'react';
-import {Navigate} from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
 import usersData from './users.json';
 import './Login.css';
-import { Link } from 'react-router-dom'
-import Home from './Home'
 import bcrypt from 'bcryptjs'
 
 const salt = bcrypt.genSaltSync(10)
@@ -21,13 +17,7 @@ const Login = () => {
     function handleOnSubmit(e) {
         e.preventDefault();
 
-        // hashing password
-
-        var salt = bcrypt.genSaltSync(10);
-        const hashedPassword = bcrypt.hashSync(pwd , salt)
-
-        localStorage.setItem("password" , hashedPassword);
-        console.log("password encrypted")
+        
       
 
         const isUserExist = users.find((user) => {
@@ -40,12 +30,28 @@ const Login = () => {
         );
         
         if (isUserExist) {
-            window.location.href= "/home"
+        //  hashing password
+            var salt = bcrypt.genSaltSync(10);
+        const hashedPassword = bcrypt.hashSync(pwd , salt)
+
+        localStorage.setItem("password" , hashedPassword);
+        console.log("password encrypted")
+
+            window.location.href= "/home";
             localStorage.setItem("user_id",isUserExist.user_id)
+            localStorage.setItem("first name",isUserExist.first_name)
+            localStorage.setItem("last_name",isUserExist.last_name)
+            localStorage.setItem("email",isUserExist.email)
+            
+          
+        } else {
+            document.getElementById("demo").innerHTML = "Please enter a  valid Email/Password"
         }
 
         
         console.log(isUserExist);
+
+        
 
 
     }
@@ -59,13 +65,14 @@ const Login = () => {
             <section>
                 <center>
                     <div className="main">
-                        <div className="card">
-                            <h1>Log In</h1>
+                        <div className="cardd">
+                            <h2 className='htag'>Log In</h2>
                             <form action="" onSubmit={handleOnSubmit}>
                                 <div className="user">
 
                                     <input type="text"
                                         placeholder='Enter Username'
+                                        
                                         onChange={(e) => { setEmail(e.target.value) }}
                                         required
                                     />
@@ -76,15 +83,15 @@ const Login = () => {
                                     <input
                                         type="password"
                                         placeholder='Enter Password'
+                                        
                                         required
                                         onChange={(e) => { setPwd(e.target.value) }}
                                     />
+                                    <p id="demo"></p>
 
                                 </div>
                                 <div >
                                     <button className="btn" >LOGIN</button>
-                                    {/* <button onClick={hehe} className="btn" >hehe</button> */}
-                                    {/* <Link to="/home"><button className="btn" >LOGIN</button></Link> */}
                                 </div>
                             </form>
                         </div>

@@ -2,15 +2,21 @@ import React from 'react'
 import './Home.css';
 import Listing from './Listing'
 import {Link} from 'react-router-dom';
-import usersData from './invitations.json'
-import { useState } from 'react';
+
+
+
 
 
 const Home = (props) => {
-  const [users ,setUsers] = useState("");
+  // const [users ,setUsers] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [pwd, setPwd] = useState("");
   
-  const data = usersData.users
-   
+  const hanleLogout = () => {
+    localStorage.clear();
+    console.clear();
+  };
+  
 
   
   return (
@@ -18,10 +24,17 @@ const Home = (props) => {
     <>
     <section>
     <center>
-      <Link to ="/login"><button className='btn'>LOGOUT</button></Link>
+      <div className="cen">
+      <Link to ="/login"><button onClick={hanleLogout} className='btn-lo'>LOGOUT</button></Link>
+      </div> 
       </center>
     
     <Listing/>
+    
+    {/* <UpdateInv/> */}
+    {/* <Listing/>
+    <Listing/>
+    <Listing/> */}
 
     
         

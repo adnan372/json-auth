@@ -4,7 +4,16 @@
     margin : 0;
     box-sizing: border-box;
 }
-.main {
+.cen {
+    height: 50px;
+    
+    
+}
+.card {
+    margin-top: 0%;
+    background-color:#ce63f8;
+}
+/* .main {
     height: 400px;
     width: 250px;
     background-color: white;
@@ -23,15 +32,19 @@
     margin-left: 25px;
     font-family: 'Itim', cursive;
     
-} 
-.btn {
+}  */
+.btn-lo {
+    position: absolute;
+    right: 5%;
     padding : 10px 20px;
     border-radius: 20px;
     font-weight: 400;
     border: none;
     color: white;
     margin-top: 25px;
+    
     font-family: sans-serif;
     font-weight: 600;
     background: linear-gradient(135deg, rgba(60,231,123,1) 0%, rgba(0,142,255,1) 70%);
 }
+

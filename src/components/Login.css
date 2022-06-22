@@ -1,11 +1,12 @@
 * {
     margin: 0;
     padding : 0;
+    box-sizing: border-box;
     
     
 }
 section {
-    background-image: linear-gradient(310deg, #df98fa, #9055ff);
+    background-color:  #ce63f8;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -22,7 +23,7 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.card > h1 {
+.htag {
     margin-top: 20px;
     margin-bottom: 15px;
     color: black;
@@ -35,6 +36,9 @@ section {
     border:1px solid   #9055ff ;
 
 }
+/* .user > input:focus {
+    border: none;
+} */
 .pwd > input {
     margin : 15px auto;
     padding : 10px 5px;
@@ -43,6 +47,7 @@ section {
     border:1px solid #9055ff ;
 }
 .btn {
+    
     padding : 10px 20px;
     border-radius: 20px;
     font-weight: 400;
@@ -50,6 +55,12 @@ section {
     color: white;
     font-family: sans-serif;
     font-weight: 600;
+    
     background: linear-gradient(135deg, rgba(60,231,123,1) 0%, rgba(0,142,255,1) 70%);
+}
+
+#demo {
+    color: red;
+    font-size: 12px;
 }
 

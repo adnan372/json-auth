@@ -3,10 +3,18 @@
     padding : 0;
     margin : 0;
     box-sizing: border-box;
+    /* background-color:  #ce63f8; */
+    /* background-color:  grey; */
+
 }
-.main {
-    height: 400px;
-    width: 250px;
+.mid {
+    margin: auto;
+  width: 90%;
+}
+
+/* .card {
+    height: 450px;
+    width: 300px;
     
     background-color: white;
     position: absolute;
@@ -14,17 +22,73 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+} */
+
+/* ul {
+    margin: 20px 20px;
+} */
+ul {
+    background-color: #ce63f8 ;
 }
-.user_detail > ul > li{
-    margin: 15px auto;
+
+h1 {
+    font-size: 24px;
+    color: white;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    background-color: black;
+    width: 135px;
+    text-transform: capitalize;
+    
+    border-radius: 20px;
+}
+.user_detail {
+    padding: 25px;
+    height: 450px;
+    width: 300px;
+    display: inline-block;
+    margin: 10px;
+    align-items: center;
+    border-radius: 20px;
+    background-color: white;
+    margin-top: 25px;
+}
+/* .user_detail > ul > li{
+    margin: 5px auto;
     font-size: 20px;
-    color: purple;
+   
+    background-color: white;
     list-style-type: none;
     text-align: left;
     margin-left: 25px;
+    margin-right: 25px;
     font-family: 'Itim', cursive;
     
+} */
+.lee {
+    margin: 5px auto;
+    font-size: 18px;
+    /* color: purple; */
+    background-color: white;
+    list-style-type: none;
+    text-align: left;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: 'Itim', cursive;
+
 } 
+.lee > span {
+    text-transform: uppercase;
+    
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 4px;
+    /* padding-left: 4px;
+    padding-right: 4px; */
+    color: #ce63f8;
+    
+}
 .btn {
     padding : 10px 20px;
     border-radius: 20px;
