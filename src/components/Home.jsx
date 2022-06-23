@@ -2,15 +2,9 @@ import React from 'react'
 import './Home.css';
 import Listing from './Listing'
 import {Link} from 'react-router-dom';
+import Changed from './Changed';
 
-
-
-
-
-const Home = (props) => {
-  // const [users ,setUsers] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [pwd, setPwd] = useState("");
+const Home = () => {
   
   const hanleLogout = () => {
     localStorage.clear();
@@ -18,7 +12,6 @@ const Home = (props) => {
   };
   
 
-  
   return (
    
     <>
@@ -30,14 +23,8 @@ const Home = (props) => {
       </center>
     
     <Listing/>
-    
-    {/* <UpdateInv/> */}
-    {/* <Listing/>
-    <Listing/>
-    <Listing/> */}
-
-    
-        
+    {/* <Changed/> */}
+      
     </section>
     </>
   )
